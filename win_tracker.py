@@ -19,8 +19,6 @@ def check_input(msg, upper_limit):
 		x = input(msg)
 	return int(x)
 
-#account_id = int(input("Enter your account ID: ")) 
-
 account_id = check_input("Enter your account ID: ", 1000000000)
 
 queries = {}
@@ -53,7 +51,7 @@ def change_queries(queries):
 						conclear()
 					print(patch["name"], " - ", patch["id"])
 
-				queries["patch"] = check_input("\nEnter the patch id: ", int(patches[-1]["id"]))
+				queries["patch"] = check_input("\nEnter the patch id: ", int(patches[-1]["id"])) # should always return the element in an array of patches that is obtained through opendota
 
 			elif choice == 3: 
 
@@ -70,7 +68,7 @@ def change_queries(queries):
 						conclear()
 					print(hero_data["localized_name"], " - ", hero_data["id"])
 
-				queries["hero_id"] = check_input("\nEnter the hero id: ", int(hero_data["id"]))
+				queries["hero_id"] = check_input("\nEnter the hero id: ", int(hero_data["id"])) # hero_data will always be the latest added to Dota hero, using this because for some reason heroes[-1] didn't work.
 
 			elif choice == 4:
 
@@ -82,7 +80,7 @@ def change_queries(queries):
 
 				for lobby in lobbies:
 					lobby_info = lobbies[lobby]
-					print(lobby_info["name"], " - ", lobby_info["id"])
+					print(lobby_info["name"], " - ", lobby_info["id"]) # same as hero_data
 
 				queries["lobby_type"] = check_input("Enter the lobby id: ", int(lobby_info["id"]))
 
