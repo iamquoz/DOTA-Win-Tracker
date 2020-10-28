@@ -42,8 +42,3 @@ Build instructions:
 Same requirements apply to building on Linux: install dependencies and install pyinstaller if you'd want to build your own binary. 
 
 
-p.s. Before this I've never touched Python, so if this code causes aneurysm, sorry!
-
-p.p.s. Also sorry for the lack of comments.
-
-p.p.p.s And shitty grammar.
